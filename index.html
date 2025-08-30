@@ -89,6 +89,7 @@
                     <a href="#experience" class="text-gray-300 hover:text-white transition-colors duration-300">Experience</a>
                     <a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-300">Projects</a>
                     <a href="#skills" class="text-gray-300 hover:text-white transition-colors duration-300">Skills</a>
+                    <a href="#learning-hub" class="text-gray-300 hover:text-white transition-colors duration-300">Learning Hub</a>
                     <a href="#ai-lab" class="text-gray-300 hover:text-white transition-colors duration-300">AI Lab</a>
                     <a href="#chat" class="text-gray-300 hover:text-white transition-colors duration-300">Chat</a>
                     <a href="#education" class="text-gray-300 hover:text-white transition-colors duration-300">Education</a>
@@ -107,6 +108,7 @@
                 <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">Experience</a>
                 <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">Projects</a>
                 <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">Skills</a>
+                <a href="#learning-hub" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">Learning Hub</a>
                 <a href="#ai-lab" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">AI Lab</a>
                 <a href="#chat" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">Chat</a>
                 <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">Education</a>
@@ -311,6 +313,55 @@
         <div class="flex justify-center">
             <div class="gradient-divider"></div>
         </div>
+        
+        <!-- Learning Hub Section -->
+        <section id="learning-hub" class="section">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">Learning Hub ✨</h2>
+            <div class="card max-w-3xl mx-auto">
+                <p class="text-lg text-gray-400 mb-6 text-center">
+                    A curated guide for aspiring data professionals.
+                </p>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Data Science Roadmap</h3>
+                        <p class="text-gray-400 mb-4">
+                            Start your journey with the fundamental concepts, from statistical methods to advanced machine learning.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="https://www.coursera.org/specializations/jhu-data-science" target="_blank" class="pill transform transition-all duration-300 hover:scale-105">Coursera Data Science Specialization</a>
+                            <a href="https://www.kaggle.com/learn/overview" target="_blank" class="pill transform transition-all duration-300 hover:scale-105">Kaggle Learn</a>
+                            <a href="https://www.edx.org/course/introduction-to-data-science" target="_blank" class="pill transform transition-all duration-300 hover:scale-105">edX Introduction to Data Science</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Analytics & Business Intelligence</h3>
+                        <p class="text-gray-400 mb-4">
+                            Learn to transform data into actionable business insights with these resources.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="https://www.udemy.com/topic/power-bi/" target="_blank" class="pill transform transition-all duration-300 hover:scale-105">Power BI Courses on Udemy</a>
+                            <a href="https://www.datacamp.com/" target="_blank" class="pill transform transition-all duration-300 hover:scale-105">DataCamp for Data Analytics</a>
+                            <a href="https://www.youtube.com/channel/UCaK1T4zD0J6n4-L52vK6L7A" target="_blank" class="pill transform transition-all duration-300 hover:scale-105">YouTube BI & Analytics Channels</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Programming & Machine Learning</h3>
+                        <p class="text-gray-400 mb-4">
+                            Master the core technical skills with these hands-on platforms.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="https://www.freecodecamp.org/learn/data-analysis-with-python/" target="_blank" class="pill transform transition-all duration-300 hover:scale-105">FreeCodeCamp Python</a>
+                            <a href="https://www.w3schools.com/sql/" target="_blank" class="pill transform transition-all duration-300 hover:scale-105">W3Schools SQL Tutorial</a>
+                            <a href="https://scikit-learn.org/stable/tutorial/index.html" target="_blank" class="pill transform transition-all duration-300 hover:scale-105">Scikit-learn Tutorials</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="flex justify-center">
+            <div class="gradient-divider"></div>
+        </div>
 
         <!-- Data Science AI Lab -->
         <section id="ai-lab" class="section">
@@ -408,313 +459,398 @@
     </footer>
 
     <script>
-        // Mobile menu functionality
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = mobileMenu.querySelectorAll('a');
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Mobile menu functionality
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = mobileMenu.querySelectorAll('a');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-        
-        // Helper function for converting PCM to WAV
-        function pcmToWav(pcmData, sampleRate) {
-            const numChannels = 1;
-            const bytesPerSample = 2; // 16-bit PCM
-            const blockAlign = numChannels * bytesPerSample;
-            const byteRate = sampleRate * blockAlign;
-
-            const wavHeader = new ArrayBuffer(44);
-            const view = new DataView(wavHeader);
-
-            // RIFF chunk
-            view.setUint32(0, 0x52494646, false); // "RIFF"
-            view.setUint32(4, 36 + pcmData.length, true); // Chunk size
-            view.setUint32(8, 0x57415645, false); // "WAVE"
-
-            // fmt chunk
-            view.setUint32(12, 0x666d7420, false); // "fmt "
-            view.setUint32(16, 16, true); // Sub-chunk size
-            view.setUint16(20, 1, true); // Audio format (1 for PCM)
-            view.setUint16(22, numChannels, true); // Number of channels
-            view.setUint32(24, sampleRate, true); // Sample rate
-            view.setUint32(28, byteRate, true); // Byte rate
-            view.setUint16(32, blockAlign, true); // Block align
-            view.setUint16(34, bytesPerSample * 8, true); // Bits per sample
-
-            // data chunk
-            view.setUint32(36, 0x64617461, false); // "data"
-            view.setUint32(40, pcmData.length, true); // Sub-chunk 2 size
-
-            // Combine header and data
-            const wavBlob = new Blob([wavHeader, pcmData], { type: 'audio/wav' });
-            return wavBlob;
-        }
-
-        // Gemini API integration for generating project ideas
-        const generateButton = document.getElementById('generate-button');
-        const domainInput = document.getElementById('domain-input');
-        const aiResponseDiv = document.getElementById('ai-response');
-        const responseTextP = document.getElementById('response-text');
-        
-        generateButton.addEventListener('click', async () => {
-            const domain = domainInput.value.trim();
-            if (!domain) {
-                responseTextP.innerHTML = 'Please enter a domain to generate an idea.';
-                aiResponseDiv.classList.remove('hidden');
-                return;
-            }
-
-            generateButton.textContent = 'Generating...';
-            generateButton.disabled = true;
-            aiResponseDiv.classList.add('hidden');
-
-            const systemPrompt = "You are a world-class data scientist and AI assistant. Your task is to generate a concise, single-paragraph data science project idea. The idea should be tailored to a specific domain and should suggest a few relevant technologies (e.g., Python, SQL, machine learning algorithms). The response should be professional and encouraging. Always start with the phrase 'Project Idea:' and then provide the details.";
-            const userQuery = `Generate a data science project idea for the domain of '${domain}'.`;
-
-            try {
-                const apiKey = "AIzaSyBJ3uG2dKN7Tyd3nRar-8-kBXG7chW9X_M";
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-
-                const payload = {
-                    contents: [{
-                        parts: [{ text: userQuery }]
-                    }],
-                    systemInstruction: {
-                        parts: [{ text: systemPrompt }]
-                    }
-                };
-
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
                 });
-                const result = await response.json();
-                const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
-
-                if (text) {
-                    responseTextP.innerHTML = text.replace(/\n/g, '<br>');
-                } else {
-                    responseTextP.innerHTML = 'Sorry, an error occurred. Please try again.';
-                }
-            } catch (error) {
-                console.error('Error generating project idea:', error);
-                responseTextP.innerHTML = 'Sorry, an error occurred. Please try again.';
-            } finally {
-                generateButton.textContent = 'Generate Idea';
-                generateButton.disabled = false;
-                aiResponseDiv.classList.remove('hidden');
-            }
-        });
-
-        // Gemini API integration for summarizing a project
-        const summarizeButton = document.getElementById('summarize-button');
-        const projectInput = document.getElementById('project-input');
-        const summarizerResponseDiv = document.getElementById('summarizer-response');
-        const summarizerTextP = document.getElementById('summarizer-text');
-
-        summarizeButton.addEventListener('click', async () => {
-            const projectDescription = projectInput.value.trim();
-            if (!projectDescription) {
-                summarizerTextP.innerHTML = 'Please enter a project description to summarize.';
-                summarizerResponseDiv.classList.remove('hidden');
-                return;
             }
 
-            summarizeButton.textContent = 'Summarizing...';
-            summarizeButton.disabled = true;
-            summarizerResponseDiv.classList.add('hidden');
-
-            const systemPrompt = "You are a professional technical writer and data science recruiter. Your task is to take a detailed project description and summarize it into a concise, one-paragraph summary suitable for a professional resume or portfolio. Highlight the objective, solution, and key achievements in a clear and impactful way. Do not include a title.";
-            const userQuery = `Summarize the following project description:\n\n${projectDescription}`;
-
-            try {
-                const apiKey = "AIzaSyBJ3uG2dKN7Tyd3nRar-8-kBXG7chW9X_M";
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-                const payload = {
-                    contents: [{
-                        parts: [{ text: userQuery }]
-                    }],
-                    systemInstruction: {
-                        parts: [{ text: systemPrompt }]
-                    }
-                };
-
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
+            if (navLinks) {
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
                 });
-                const result = await response.json();
-                const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
-
-                if (text) {
-                    summarizerTextP.innerHTML = text.replace(/\n/g, '<br>');
-                } else {
-                    summarizerTextP.innerHTML = 'Sorry, an error occurred. Please try again.';
-                }
-            } catch (error) {
-                console.error('Error summarizing project:', error);
-                summarizerTextP.innerHTML = 'Sorry, an error occurred. Please try again.';
-            } finally {
-                summarizeButton.textContent = 'Summarize Project';
-                summarizerButton.disabled = false;
-                summarizerResponseDiv.classList.remove('hidden');
             }
-        });
-        
-        // Gemini API integration for Text-to-Speech
-        const ttsButton = document.getElementById('tts-button');
-        const aboutText = document.getElementById('about-text').innerText;
-        const name = "Rishav Raj";
-        const title = "Data Scientist and Business Analyst";
-        const fullAboutText = `I am a Data Scientist with a passion for leveraging data science techniques to solve complex business challenges. With expertise in data science, AI, and advanced analytics, I bridge business strategy with technology to deliver impactful solutions. I am skilled in Python, SQL, and data visualization tools like Power BI, transforming raw data into actionable insights that drive business growth. What drives me is curiosity—constantly asking 'what's next' and pushing boundaries through continuous learning, unlearning, and relearning. I aim to bring clarity, innovation, and forward-thinking solutions to every problem I tackle. At my core, I'm someone who values research-driven insights and innovation, and believes in building solutions that are not just smart, but also scalable and impactful.`;
-        const audio = new Audio();
+            
+            // Helper function for converting PCM to WAV
+            function pcmToWav(pcmData, sampleRate) {
+                const numChannels = 1;
+                const bytesPerSample = 2; // 16-bit PCM
+                const blockAlign = numChannels * bytesPerSample;
+                const byteRate = sampleRate * blockAlign;
 
-        ttsButton.addEventListener('click', async () => {
-            ttsButton.disabled = true;
-            const originalText = ttsButton.innerHTML;
-            ttsButton.innerHTML = 'Generating Audio...';
+                const wavHeader = new ArrayBuffer(44);
+                const view = new DataView(wavHeader);
 
-            try {
-                const apiKey = "AIzaSyBJ3uG2dKN7Tyd3nRar-8-kBXG7chW9X_M";
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+                // RIFF chunk
+                view.setUint32(0, 0x52494646, false); // "RIFF"
+                view.setUint32(4, 36 + pcmData.length, true); // Chunk size
+                view.setUint32(8, 0x57415645, false); // "WAVE"
 
-                const payload = {
-                    contents: [{
-                        parts: [{ text: fullAboutText }]
-                    }],
-                    generationConfig: {
-                        responseModalities: ["AUDIO"],
-                        speechConfig: {
-                            voiceConfig: {
-                                prebuiltVoiceConfig: { voiceName: "Kore" }
+                // fmt chunk
+                view.setUint32(12, 0x666d7420, false); // "fmt "
+                view.setUint32(16, 16, true); // Sub-chunk size
+                view.setUint16(20, 1, true); // Audio format (1 for PCM)
+                view.setUint16(22, numChannels, true); // Number of channels
+                view.setUint32(24, sampleRate, true); // Sample rate
+                view.setUint32(28, byteRate, true); // Byte rate
+                view.setUint16(32, blockAlign, true); // Block align
+                view.setUint16(34, bytesPerSample * 8, true); // Bits per sample
+
+                // data chunk
+                view.setUint32(36, 0x64617461, false); // "data"
+                view.setUint32(40, pcmData.length, true); // Sub-chunk 2 size
+
+                // Combine header and data
+                const wavBlob = new Blob([wavHeader, pcmData], { type: 'audio/wav' });
+                return wavBlob;
+            }
+
+            // Gemini API integration for generating project ideas
+            const generateButton = document.getElementById('generate-button');
+            const domainInput = document.getElementById('domain-input');
+            const aiResponseDiv = document.getElementById('ai-response');
+            const responseTextP = document.getElementById('response-text');
+            
+            if (generateButton) {
+                generateButton.addEventListener('click', async () => {
+                    const domain = domainInput.value.trim();
+                    if (!domain) {
+                        responseTextP.innerHTML = 'Please enter a domain to generate an idea.';
+                        aiResponseDiv.classList.remove('hidden');
+                        return;
+                    }
+
+                    generateButton.textContent = 'Generating...';
+                    generateButton.disabled = true;
+                    aiResponseDiv.classList.add('hidden');
+
+                    const systemPrompt = "You are a world-class data scientist and AI assistant. Your task is to generate a concise, single-paragraph data science project idea. The idea should be tailored to a specific domain and should suggest a few relevant technologies (e.g., Python, SQL, machine learning algorithms). The response should be professional and encouraging. Always start with the phrase 'Project Idea:' and then provide the details.";
+                    const userQuery = `Generate a data science project idea for the domain of '${domain}'.`;
+
+                    try {
+                        const apiKey = "AIzaSyBJ3uG2dKN7Tyd3nRar-8-kBXG7chW9X_M";
+                        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+                        const payload = {
+                            contents: [{
+                                parts: [{ text: userQuery }]
+                            }],
+                            systemInstruction: {
+                                parts: [{ text: systemPrompt }]
                             }
+                        };
+
+                        const response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+                        const result = await response.json();
+                        const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                        if (text) {
+                            responseTextP.innerHTML = text.replace(/\n/g, '<br>');
+                        } else {
+                            responseTextP.innerHTML = 'Sorry, an error occurred. Please try again.';
                         }
+                    } catch (error) {
+                        console.error('Error generating project idea:', error);
+                        responseTextP.innerHTML = 'Sorry, an error occurred. Please try again.';
+                    } finally {
+                        generateButton.textContent = 'Generate Idea';
+                        generateButton.disabled = false;
+                        aiResponseDiv.classList.remove('hidden');
                     }
-                };
-                
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
                 });
-                
-                const result = await response.json();
-                const part = result?.candidates?.[0]?.content?.parts?.[0];
-                const audioData = part?.inlineData?.data;
-                const mimeType = part?.inlineData?.mimeType;
-
-                if (audioData && mimeType && mimeType.startsWith("audio/")) {
-                    const sampleRateMatch = mimeType.match(/rate=(\d+)/);
-                    const sampleRate = sampleRateMatch ? parseInt(sampleRateMatch[1], 10) : 16000;
-                    const pcmData = Uint8Array.from(atob(audioData), c => c.charCodeAt(0));
-                    const pcm16 = new Int16Array(pcmData.buffer);
-                    const wavBlob = pcmToWav(pcm16, sampleRate);
-                    audio.src = URL.createObjectURL(wavBlob);
-                    audio.play();
-                } else {
-                    console.error('Invalid audio data received.');
-                }
-            } catch (error) {
-                console.error('Error generating TTS audio:', error);
-            } finally {
-                ttsButton.innerHTML = originalText;
-                ttsButton.disabled = false;
             }
-        });
-        
-        // Data Analysis Chatbot
-        const chatInput = document.getElementById('chat-input');
-        const chatSendButton = document.getElementById('chat-send-button');
-        const chatContainer = document.getElementById('chat-container');
 
-        const chatHistory = [{
-            role: "model",
-            parts: [{
-                text: "Hello! I'm a Data Analysis bot. I've been trained on Rishav Raj's professional experience and projects. How can I help you?"
-            }]
-        }];
+            // Gemini API integration for summarizing a project
+            const summarizeButton = document.getElementById('summarize-button');
+            const projectInput = document.getElementById('project-input');
+            const summarizerResponseDiv = document.getElementById('summarizer-response');
+            const summarizerTextP = document.getElementById('summarizer-text');
 
-        async function sendMessage() {
-            const userMessage = chatInput.value.trim();
-            if (userMessage === "") return;
+            if (summarizeButton) {
+                summarizeButton.addEventListener('click', async () => {
+                    const projectDescription = projectInput.value.trim();
+                    if (!projectDescription) {
+                        summarizerTextP.innerHTML = 'Please enter a project description to summarize.';
+                        summarizerResponseDiv.classList.remove('hidden');
+                        return;
+                    }
 
-            // Add user message to chat history
-            chatHistory.push({
-                role: "user",
+                    summarizeButton.textContent = 'Summarizing...';
+                    summarizerButton.disabled = true;
+                    summarizerResponseDiv.classList.add('hidden');
+
+                    const systemPrompt = "You are a professional technical writer and data science recruiter. Your task is to take a detailed project description and summarize it into a concise, one-paragraph summary suitable for a professional resume or portfolio. Highlight the objective, solution, and key achievements in a clear and impactful way. Do not include a title.";
+                    const userQuery = `Summarize the following project description:\n\n${projectDescription}`;
+
+                    try {
+                        const apiKey = "AIzaSyBJ3uG2dKN7Tyd3nRar-8-kBXG7chW9X_M";
+                        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                        const payload = {
+                            contents: [{
+                                parts: [{ text: userQuery }]
+                            }],
+                            systemInstruction: {
+                                parts: [{ text: systemPrompt }]
+                            }
+                        };
+
+                        const response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+                        const result = await response.json();
+                        const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                        if (text) {
+                            summarizerTextP.innerHTML = text.replace(/\n/g, '<br>');
+                        } else {
+                            summarizerTextP.innerHTML = 'Sorry, an error occurred. Please try again.';
+                        }
+                    } catch (error) {
+                        console.error('Error summarizing project:', error);
+                        summarizerTextP.innerHTML = 'Sorry, an error occurred. Please try again.';
+                    } finally {
+                        summarizeButton.textContent = 'Summarize Project';
+                        summarizerButton.disabled = false;
+                        summarizerResponseDiv.classList.remove('hidden');
+                    }
+                });
+            }
+            
+            // Gemini API integration for Text-to-Speech
+            const ttsButton = document.getElementById('tts-button');
+            const aboutText = document.getElementById('about-text').innerText;
+            const name = "Rishav Raj";
+            const title = "Data Scientist and Business Analyst";
+            const fullAboutText = `I am a Data Scientist with a passion for leveraging data science techniques to solve complex business challenges. With expertise in data science, AI, and advanced analytics, I bridge business strategy with technology to deliver impactful solutions. I am skilled in Python, SQL, and data visualization tools like Power BI, transforming raw data into actionable insights that drive business growth. What drives me is curiosity—constantly asking 'what's next' and pushing boundaries through continuous learning, unlearning, and relearning. I aim to bring clarity, innovation, and forward-thinking solutions to every problem I tackle. At my core, I'm someone who values research-driven insights and innovation, and believes in building solutions that are not just smart, but also scalable and impactful.`;
+            const audio = new Audio();
+
+            if (ttsButton) {
+                ttsButton.addEventListener('click', async () => {
+                    ttsButton.disabled = true;
+                    const originalText = ttsButton.innerHTML;
+                    ttsButton.innerHTML = 'Generating Audio...';
+
+                    try {
+                        const apiKey = "AIzaSyBJ3uG2dKN7Tyd3nRar-8-kBXG7chW9X_M";
+                        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+
+                        const payload = {
+                            contents: [{
+                                parts: [{ text: fullAboutText }]
+                            }],
+                            generationConfig: {
+                                responseModalities: ["AUDIO"],
+                                speechConfig: {
+                                    voiceConfig: {
+                                        prebuiltVoiceConfig: { voiceName: "Kore" }
+                                    }
+                                }
+                            }
+                        };
+                        
+                        const response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+                        
+                        const result = await response.json();
+                        const part = result?.candidates?.[0]?.content?.parts?.[0];
+                        const audioData = part?.inlineData?.data;
+                        const mimeType = part?.inlineData?.mimeType;
+
+                        if (audioData && mimeType && mimeType.startsWith("audio/")) {
+                            const sampleRateMatch = mimeType.match(/rate=(\d+)/);
+                            const sampleRate = sampleRateMatch ? parseInt(sampleRateMatch[1], 10) : 16000;
+                            const pcmData = Uint8Array.from(atob(audioData), c => c.charCodeAt(0));
+                            const pcm16 = new Int16Array(pcmData.buffer);
+                            const wavBlob = pcmToWav(pcm16, sampleRate);
+                            audio.src = URL.createObjectURL(wavBlob);
+                            audio.play();
+                        } else {
+                            console.error('Invalid audio data received.');
+                        }
+                    } catch (error) {
+                        console.error('Error generating TTS audio:', error);
+                    } finally {
+                        ttsButton.innerHTML = originalText;
+                        ttsButton.disabled = false;
+                    }
+                });
+            }
+            
+            // Data Analysis Chatbot
+            const chatInput = document.getElementById('chat-input');
+            const chatSendButton = document.getElementById('chat-send-button');
+            const chatContainer = document.getElementById('chat-container');
+
+            const chatHistory = [{
+                role: "model",
                 parts: [{
-                    text: userMessage
+                    text: "Hello! I'm a Data Analysis bot. I've been trained on Rishav Raj's professional experience and projects. How can I help you?"
                 }]
-            });
-            renderMessage(userMessage, 'user');
-            chatInput.value = "";
-            chatContainer.scrollTop = chatContainer.scrollHeight;
+            }];
+            
+            if (chatSendButton && chatInput) {
+                async function sendMessage() {
+                    const userMessage = chatInput.value.trim();
+                    if (userMessage === "") return;
 
-            chatSendButton.disabled = true;
-            chatSendButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i>`;
+                    // Add user message to chat history
+                    chatHistory.push({
+                        role: "user",
+                        parts: [{
+                            text: userMessage
+                        }]
+                    });
+                    renderMessage(userMessage, 'user');
+                    chatInput.value = "";
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
 
-            const systemPrompt = "You are a professional Data Analysis chatbot. Your purpose is to answer questions about Rishav Raj's professional background and skills based on the context provided. The context includes his work experience at TCS and Udaan, his key projects (Automated Invoicing Dashboard, Financial Forecasting Model, Inventory Optimization), and his skills (Python, SQL, Power BI, etc.). Answer questions professionally and concisely, pulling information from the provided context. If a user asks a question that cannot be answered from the provided context, politely state that the information is not available in Rishav's public portfolio.";
-            const userQuery = `Using the following context, answer the user's question. If the information is not available, state that politely. Context: Rishav Raj is a Data Scientist. At TCS (March 2024-Present), he led development of documentation (reducing errors by 25%), conducted ad-hoc analysis, partnered with cross-functional teams, and implemented data quality improvements. At Udaan (Sep 2019-Feb 2024), he enhanced budgeting accuracy by 95%, launched a VMS (99% efficiency), automated GST reporting (95% reduction in outstanding dues), and executed invoice reconciliation (90% reduction in unexpected invoicing). His key projects include an Automated Invoicing Dashboard (increased efficiency by 99%), a Financial Forecasting Model (95% budgeting accuracy), and Inventory Optimization (33% lead time reduction, 47% cost reduction). His technical skills are Python, SQL, Power BI, Matplotlib, Seaborn, Scikit-learn, Numpy, Pandas, Jupyter Notebook, Git, Excel, and Google Analytics. The user's question is: '${userMessage}'.`;
+                    chatSendButton.disabled = true;
+                    chatSendButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i>`;
 
-            try {
-                const apiKey = "AIzaSyBJ3uG2dKN7Tyd3nRar-8-kBXG7chW9X_M";
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-                
-                const payload = {
-                    contents: [{
-                        parts: [{ text: userQuery }]
-                    }],
-                    systemInstruction: {
-                        parts: [{ text: systemPrompt }]
+                    const systemPrompt = "You are a professional Data Analysis chatbot. Your purpose is to answer questions about Rishav Raj's professional background and skills based on the context provided. The context includes his work experience at TCS and Udaan, his key projects (Automated Invoicing Dashboard, Financial Forecasting Model, Inventory Optimization), and his skills (Python, SQL, Power BI, etc.). Answer questions professionally and concisely, pulling information from the provided context. If a user asks a question that cannot be answered from the provided context, politely state that the information is not available in Rishav's public portfolio.";
+                    const userQuery = `Using the following context, answer the user's question. If the information is not available, state that politely. Context: Rishav Raj is a Data Scientist. At TCS (March 2024-Present), he led development of documentation (reducing errors by 25%), conducted ad-hoc analysis, partnered with cross-functional teams, and implemented data quality improvements. At Udaan (Sep 2019-Feb 2024), he enhanced budgeting accuracy by 95%, launched a VMS (99% efficiency), automated GST reporting (95% reduction in outstanding dues), and executed invoice reconciliation (90% reduction in unexpected invoicing). His key projects include an Automated Invoicing Dashboard (increased efficiency by 99%), a Financial Forecasting Model (95% budgeting accuracy), and Inventory Optimization (33% lead time reduction, 47% cost reduction). His technical skills are Python, SQL, Power BI, Matplotlib, Seaborn, Scikit-learn, Numpy, Pandas, Jupyter Notebook, Git, Excel, and Google Analytics. The user's question is: '${userMessage}'.`;
+
+                    try {
+                        const apiKey = "AIzaSyBJ3uG2dKN7Tyd3nRar-8-kBXG7chW9X_M";
+                        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                        
+                        const payload = {
+                            contents: [{
+                                parts: [{ text: userQuery }]
+                            }],
+                            systemInstruction: {
+                                parts: [{ text: systemPrompt }]
+                            }
+                        };
+
+                        const response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+                        const result = await response.json();
+                        const aiResponse = result?.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I am unable to answer that question based on the provided information.";
+
+                        // Add AI response to chat history
+                        chatHistory.push({
+                            role: "model",
+                            parts: [{
+                                text: aiResponse
+                            }]
+                        });
+                        renderMessage(aiResponse, 'ai');
+                    } catch (error) {
+                        console.error("Error during chat:", error);
+                        renderMessage("Sorry, I'm having trouble connecting right now. Please try again later.", 'ai');
+                    } finally {
+                        chatSendButton.disabled = false;
+                        chatSendButton.innerHTML = `<i class="fas fa-paper-plane"></i>`;
+                        chatContainer.scrollTop = chatContainer.scrollHeight;
                     }
-                };
+                }
 
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-                const result = await response.json();
-                const aiResponse = result?.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I am unable to answer that question based on the provided information.";
+                function renderMessage(text, sender) {
+                    const messageDiv = document.createElement('div');
+                    messageDiv.classList.add('chat-message', sender);
+                    messageDiv.innerHTML = `<p>${text}</p>`;
+                    chatContainer.appendChild(messageDiv);
+                }
 
-                // Add AI response to chat history
-                chatHistory.push({
-                    role: "model",
-                    parts: [{
-                        text: aiResponse
-                    }]
+                chatSendButton.addEventListener('click', sendMessage);
+
+                chatInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        sendMessage();
+                    }
                 });
-                renderMessage(aiResponse, 'ai');
-            } catch (error) {
-                console.error("Error during chat:", error);
-                renderMessage("Sorry, I'm having trouble connecting right now. Please try again later.", 'ai');
-            } finally {
-                chatSendButton.disabled = false;
-                chatSendButton.innerHTML = `<i class="fas fa-paper-plane"></i>`;
-                chatContainer.scrollTop = chatContainer.scrollHeight;
             }
-        }
 
-        function renderMessage(text, sender) {
-            const messageDiv = document.createElement('div');
-            messageDiv.classList.add('chat-message', sender);
-            messageDiv.innerHTML = `<p>${text}</p>`;
-            chatContainer.appendChild(messageDiv);
-        }
+            // Image Understanding Feature
+            const imageFileInput = document.getElementById('image-file-input');
+            const imagePromptInput = document.getElementById('image-prompt-input');
+            const imageAnalyzeButton = document.getElementById('image-analyze-button');
+            const imageResponseDiv = document.getElementById('image-response');
+            const imageResponseTextP = document.getElementById('image-response-text');
 
-        chatSendButton.addEventListener('click', sendMessage);
+            if (imageAnalyzeButton) {
+                imageAnalyzeButton.addEventListener('click', async () => {
+                    const file = imageFileInput.files[0];
+                    const prompt = imagePromptInput.value.trim();
 
-        chatInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                sendMessage();
+                    if (!file || !prompt) {
+                        imageResponseTextP.innerText = "Please select a file and enter a prompt to analyze.";
+                        imageResponseDiv.classList.remove('hidden');
+                        return;
+                    }
+
+                    imageAnalyzeButton.textContent = "Analyzing...";
+                    imageAnalyzeButton.disabled = true;
+                    imageResponseDiv.classList.add('hidden');
+
+                    const reader = new FileReader();
+                    reader.onload = async (e) => {
+                        const base64ImageData = e.target.result.split(',')[1];
+                        
+                        try {
+                            const apiKey = "AIzaSyBJ3uG2dKN7Tyd3nRar-8-kBXG7chW9X_M";
+                            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+                            const payload = {
+                                contents: [{
+                                    parts: [
+                                        { text: prompt },
+                                        {
+                                            inlineData: {
+                                                mimeType: file.type,
+                                                data: base64ImageData
+                                            }
+                                        }
+                                    ]
+                                }]
+                            };
+
+                            const response = await fetch(apiUrl, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify(payload)
+                            });
+
+                            const result = await response.json();
+                            const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                            if (text) {
+                                imageResponseTextP.innerText = text;
+                            } else {
+                                imageResponseTextP.innerText = 'Sorry, an error occurred. Please try again.';
+                            }
+                        } catch (error) {
+                            console.error("Error analyzing image:", error);
+                            imageResponseTextP.innerText = 'Sorry, an error occurred. Please try again.';
+                        } finally {
+                            imageAnalyzeButton.textContent = 'Analyze Image';
+                            imageAnalyzeButton.disabled = false;
+                            imageResponseDiv.classList.remove('hidden');
+                        }
+                    };
+                    reader.readAsDataURL(file);
+                });
             }
         });
     </script>
