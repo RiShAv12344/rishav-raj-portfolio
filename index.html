@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishav Raj | Data Scientist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-900 text-gray-300;
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #6EE7B7, #3B82F6);
+        }
+        .section {
+            @apply py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+        }
+        .card {
+            @apply bg-gray-800 rounded-2xl p-6 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl;
+        }
+        .project-card {
+            @apply bg-gray-800 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:shadow-2xl;
+        }
+        .pill {
+            @apply inline-block bg-gray-700 text-gray-200 text-xs font-semibold px-3 py-1 rounded-full;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-300">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-80 backdrop-blur-md transition-all duration-300">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#about" class="text-xl font-bold text-white tracking-wide">Rishav Raj</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a>
+                    <a href="#experience" class="text-gray-300 hover:text-white transition-colors duration-300">Experience</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-300">Projects</a>
+                    <a href="#skills" class="text-gray-300 hover:text-white transition-colors duration-300">Skills</a>
+                    <a href="#ai-lab" class="text-gray-300 hover:text-white transition-colors duration-300">AI Lab</a>
+                    <a href="#education" class="text-gray-300 hover:text-white transition-colors duration-300">Education</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile menu content -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">About</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">Experience</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">Projects</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">Skills</a>
+                <a href="#ai-lab" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">AI Lab</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">Education</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+
+        <!-- About Me Section -->
+        <section id="about" class="section text-center">
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
+                <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden border-4 border-gray-700 shadow-xl transform transition-all duration-500 hover:scale-105">
+                    <!-- Placeholder image for a professional headshot -->
+                    <img src="https://placehold.co/256x256/1f2937/d1d5db?text=Rishav+Raj" alt="Rishav Raj's professional headshot" class="w-full h-full object-cover">
+                </div>
+                <div class="text-left max-w-xl">
+                    <h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
+                        Rishav Raj
+                    </h1>
+                    <p class="mt-2 text-xl sm:text-2xl font-semibold text-gray-400">
+                        Data Scientist & Business Analyst
+                    </p>
+                    <p id="about-text" class="mt-4 text-gray-400 leading-relaxed">
+                        I'm a Data Scientist with a passion for leveraging data science techniques to solve complex business challenges. With expertise in data science, AI, and advanced analytics, I bridge business strategy with technology to deliver impactful solutions. I am skilled in Python, SQL, and data visualization tools like Power BI, transforming raw data into actionable insights that drive business growth.
+                    </p>
+                    <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-4">
+                        <button id="tts-button" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition-all duration-300 hover:bg-blue-500 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Listen to My Summary ✨
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="experience" class="section">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">Work Experience</h2>
+            <div class="space-y-12">
+                <div class="card">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                        <h3 class="text-2xl font-semibold text-white">Lead Analytics (Data Science)</h3>
+                        <span class="text-gray-400 mt-2 sm:mt-0">Mar 2024 - Present</span>
+                    </div>
+                    <p class="text-lg font-medium text-gray-300 mb-2">TCS | Bengaluru</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Led the development and maintenance of detailed integration and system configuration documentation on SharePoint, reducing integration errors by 25%.</li>
+                        <li>Conducted in-depth ad-hoc analysis using statistical and machine learning techniques, delivering actionable insights to stakeholders in a clear and data-driven manner.</li>
+                        <li>Partnered with cross-functional teams to translate complex business requirements into scalable analytical solutions, enhancing decision-making processes.</li>
+                        <li>Identified and implemented data quality improvements, optimizing efficiency and effectiveness in business operations through automation and advanced analytics.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                        <h3 class="text-2xl font-semibold text-white">Senior Analytics Supply Chain</h3>
+                        <span class="text-gray-400 mt-2 sm:mt-0">Sep 2019 - Feb 2024</span>
+                    </div>
+                    <p class="text-lg font-medium text-gray-300 mb-2">Udaan | Bengaluru</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Enhanced budgeting accuracy by 95% and delivered dependable cost forecasts by overseeing intricate financial models.</li>
+                        <li>Led the launch of Vendor Management System (VMS) features, achieving 99% efficiency in invoice processing for supply chain vendors.</li>
+                        <li>Utilized Power BI for automating GST reporting processes, resulting in a 95% reduction in outstanding dues and enhanced compliance tracking.</li>
+                        <li>Executed invoice reconciliation processes, achieving a 90% reduction in unexpected invoicing.</li>
+                        <li>Utilized Power BI to create user-friendly, automated dashboards for seamless KPI visibility, enabling data-informed strategic decisions and improving decision accuracy by 20%.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects & Achievements Section -->
+        <section id="projects" class="section">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">Projects & Achievements</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card">
+                    <h3 class="text-xl font-semibold text-white mb-2">Automated Invoicing Dashboard</h3>
+                    <p class="text-sm text-gray-400 mb-4">
+                        <span class="font-bold">Domain:</span> Supply Chain Management | <span class="font-bold">Tech Stack:</span> Python, Power BI
+                    </p>
+                    <p class="text-gray-400 mb-4">
+                        Developed an automated invoicing dashboard to streamline the invoicing process and track statuses in real-time, leading to a **99% increase in efficiency** and **90% reduction in errors**.
+                    </p>
+                </div>
+                <div class="project-card">
+                    <h3 class="text-xl font-semibold text-white mb-2">Financial Forecasting Model</h3>
+                    <p class="text-sm text-gray-400 mb-4">
+                        <span class="font-bold">Domain:</span> Financial Forecasting | <span class="font-bold">Tech Stack:</span> Python, SQL, Excel
+                    </p>
+                    <p class="text-gray-400 mb-4">
+                        Built a financial forecasting model to predict supply chain costs with high accuracy, resulting in a **95% improvement in budgeting accuracy** and more reliable financial predictions.
+                    </p>
+                </div>
+                <div class="project-card">
+                    <h3 class="text-xl font-semibold text-white mb-2">Inventory Optimization</h3>
+                    <p class="text-sm text-gray-400 mb-4">
+                        <span class="font-bold">Domain:</span> Inventory Optimization | <span class="font-bold">Tech Stack:</span> Python, SQL
+                    </p>
+                    <p class="text-gray-400 mb-4">
+                        Analyzed inventory data to develop optimization algorithms that reduced lead time by **33%** and achieved a **47% reduction in packaging expenditure**, improving profitability.
+                    </p>
+                </div>
+                <div class="project-card md:col-span-2 lg:col-span-1">
+                    <h3 class="text-xl font-semibold text-white mb-2">Key Achievements</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Revamped financial and operational tracking systems, leading to **20% cost savings**.</li>
+                        <li>Used Power BI to create visualization dashboards that led to a **30% increase in productivity**.</li>
+                        <li>Business Process Excellence Award (TCS, 2024)</li>
+                        <li>Business Excellence Award (Udaan, 2022)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Summarizer Section -->
+        <section id="summarizer" class="section">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">Project Summarizer ✨</h2>
+            <div class="card max-w-3xl mx-auto">
+                <p class="text-lg text-gray-400 mb-6 text-center">
+                    Have a project description you need to simplify? Paste it below and get a concise, recruiter-friendly summary.
+                </p>
+                <div class="flex flex-col gap-4">
+                    <textarea id="project-input" rows="5" placeholder="Paste your detailed project description here..." class="flex-1 p-3 rounded-xl bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    <button id="summarize-button" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition-all duration-300 hover:bg-blue-500">
+                        Summarize Project
+                    </button>
+                </div>
+                <div id="summarizer-response" class="mt-8 text-left p-6 bg-gray-700 rounded-xl hidden">
+                    <p id="summarizer-text" class="text-gray-200"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">Skills & Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-white mb-4">Technical Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="pill">Python</span>
+                        <span class="pill">SQL</span>
+                        <span class="pill">Power BI</span>
+                        <span class="pill">Matplotlib</span>
+                        <span class="pill">Seaborn</span>
+                        <span class="pill">Scikit-learn</span>
+                        <span class="pill">Numpy</span>
+                        <span class="pill">Pandas</span>
+                        <span class="pill">Jupyter Notebook</span>
+                        <span class="pill">Git</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-white mb-4">Analytical & Business Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="pill">Data Analysis</span>
+                        <span class="pill">Business Analysis</span>
+                        <span class="pill">S&OP Planning</span>
+                        <span class="pill">Forecasting Models</span>
+                        <span class="pill">Data Visualization</span>
+                        <span class="pill">Predictive Modeling</span>
+                        <span class="pill">Regression Analysis</span>
+                        <span class="pill">Statistical Methods</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-white mb-4">Certifications</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Generative AI DataBricks Certificate (DataBricks)</li>
+                        <li>Data Science Programming Bootcamp Certificate (Upgrad)</li>
+                        <li>Entrepreneurship Cell IIT Kanpur Certificate (IIT Kanpur)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-white mb-4">Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="pill">Jupyter Notebook</span>
+                        <span class="pill">Git</span>
+                        <span class="pill">Excel</span>
+                        <span class="pill">Google Analytics</span>
+                        <span class="pill">SharePoint</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Science AI Lab -->
+        <section id="ai-lab" class="section">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">Data Science ✨ AI Lab</h2>
+            <div class="card max-w-3xl mx-auto text-center">
+                <p class="text-lg text-gray-400 mb-6">
+                    Looking for a data science project idea? Enter a domain (e.g., "finance," "healthcare," "e-commerce") and let my AI assistant generate a project idea for you.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 mb-6">
+                    <input type="text" id="domain-input" placeholder="Enter a domain..." class="flex-1 p-3 rounded-xl bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button id="generate-button" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition-all duration-300 hover:bg-blue-500">
+                        Generate Idea
+                    </button>
+                </div>
+                <div id="ai-response" class="mt-8 text-left p-6 bg-gray-700 rounded-xl hidden">
+                    <p id="response-text" class="text-gray-200"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">Education</h2>
+            <div class="flex flex-col items-center space-y-8">
+                <div class="card w-full max-w-2xl">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                        <h3 class="text-xl font-semibold text-white">Post-Graduation: Data Science and AI</h3>
+                        <span class="text-gray-400 mt-2 sm:mt-0">2024 - 2025</span>
+                    </div>
+                    <p class="text-gray-400">IIIT Bangalore</p>
+                </div>
+                <div class="card w-full max-w-2xl">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                        <h3 class="text-xl font-semibold text-white">Bachelor of Engineering: Mechanical Engineering</h3>
+                        <span class="text-gray-400 mt-2 sm:mt-0">2015 - 2019</span>
+                    </div>
+                    <p class="text-gray-400">Chandigarh University</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section text-center">
+            <h2 class="text-4xl font-bold text-white mb-8">Get In Touch</h2>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
+                I'm always open to new opportunities and collaborations. Feel free to reach out to me for professional inquiries or just to connect.
+            </p>
+            <div class="flex justify-center items-center flex-wrap gap-6">
+                <a href="mailto:rishavraj1091@gmail.com" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition-all duration-300 hover:bg-blue-500 hover:scale-105">
+                    <i class="fas fa-envelope mr-2"></i> Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/rishav-raj07" target="_blank" rel="noopener noreferrer" class="bg-gray-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition-all duration-300 hover:bg-gray-600 hover:scale-105">
+                    <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-gray-500 text-sm">
+        <p>
+            &copy; 2025 Rishav Raj. All rights reserved.
+        </p>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Helper function for converting PCM to WAV
+        function pcmToWav(pcmData, sampleRate) {
+            const numChannels = 1;
+            const bytesPerSample = 2; // 16-bit PCM
+            const blockAlign = numChannels * bytesPerSample;
+            const byteRate = sampleRate * blockAlign;
+
+            const wavHeader = new ArrayBuffer(44);
+            const view = new DataView(wavHeader);
+
+            // RIFF chunk
+            view.setUint32(0, 0x52494646, false); // "RIFF"
+            view.setUint32(4, 36 + pcmData.length, true); // Chunk size
+            view.setUint32(8, 0x57415645, false); // "WAVE"
+
+            // fmt chunk
+            view.setUint32(12, 0x666d7420, false); // "fmt "
+            view.setUint32(16, 16, true); // Sub-chunk size
+            view.setUint16(20, 1, true); // Audio format (1 for PCM)
+            view.setUint16(22, numChannels, true); // Number of channels
+            view.setUint32(24, sampleRate, true); // Sample rate
+            view.setUint32(28, byteRate, true); // Byte rate
+            view.setUint16(32, blockAlign, true); // Block align
+            view.setUint16(34, bytesPerSample * 8, true); // Bits per sample
+
+            // data chunk
+            view.setUint32(36, 0x64617461, false); // "data"
+            view.setUint32(40, pcmData.length, true); // Sub-chunk 2 size
+
+            // Combine header and data
+            const wavBlob = new Blob([wavHeader, pcmData], { type: 'audio/wav' });
+            return wavBlob;
+        }
+
+        // Gemini API integration for generating project ideas
+        const generateButton = document.getElementById('generate-button');
+        const domainInput = document.getElementById('domain-input');
+        const aiResponseDiv = document.getElementById('ai-response');
+        const responseTextP = document.getElementById('response-text');
+        
+        generateButton.addEventListener('click', async () => {
+            const domain = domainInput.value.trim();
+            if (!domain) {
+                responseTextP.innerHTML = 'Please enter a domain to generate an idea.';
+                aiResponseDiv.classList.remove('hidden');
+                return;
+            }
+
+            generateButton.textContent = 'Generating...';
+            generateButton.disabled = true;
+            aiResponseDiv.classList.add('hidden');
+
+            const systemPrompt = "You are a world-class data scientist and AI assistant. Your task is to generate a concise, single-paragraph data science project idea. The idea should be tailored to a specific domain and should suggest a few relevant technologies (e.g., Python, SQL, machine learning algorithms). The response should be professional and encouraging. Always start with the phrase 'Project Idea:' and then provide the details.";
+            const userQuery = `Generate a data science project idea for the domain of '${domain}'.`;
+
+            try {
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+                const payload = {
+                    contents: [{
+                        parts: [{ text: userQuery }]
+                    }],
+                    systemInstruction: {
+                        parts: [{ text: systemPrompt }]
+                    }
+                };
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (text) {
+                    responseTextP.innerHTML = text.replace(/\n/g, '<br>');
+                } else {
+                    responseTextP.innerHTML = 'Sorry, an error occurred. Please try again.';
+                }
+            } catch (error) {
+                console.error('Error generating project idea:', error);
+                responseTextP.innerHTML = 'Sorry, an error occurred. Please try again.';
+            } finally {
+                generateButton.textContent = 'Generate Idea';
+                generateButton.disabled = false;
+                aiResponseDiv.classList.remove('hidden');
+            }
+        });
+
+        // Gemini API integration for summarizing a project
+        const summarizeButton = document.getElementById('summarize-button');
+        const projectInput = document.getElementById('project-input');
+        const summarizerResponseDiv = document.getElementById('summarizer-response');
+        const summarizerTextP = document.getElementById('summarizer-text');
+
+        summarizeButton.addEventListener('click', async () => {
+            const projectDescription = projectInput.value.trim();
+            if (!projectDescription) {
+                summarizerTextP.innerHTML = 'Please enter a project description to summarize.';
+                summarizerResponseDiv.classList.remove('hidden');
+                return;
+            }
+
+            summarizeButton.textContent = 'Summarizing...';
+            summarizeButton.disabled = true;
+            summarizerResponseDiv.classList.add('hidden');
+
+            const systemPrompt = "You are a professional technical writer and data science recruiter. Your task is to take a detailed project description and summarize it into a concise, one-paragraph summary suitable for a professional resume or portfolio. Highlight the objective, solution, and key achievements in a clear and impactful way. Do not include a title.";
+            const userQuery = `Summarize the following project description:\n\n${projectDescription}`;
+
+            try {
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                const payload = {
+                    contents: [{
+                        parts: [{ text: userQuery }]
+                    }],
+                    systemInstruction: {
+                        parts: [{ text: systemPrompt }]
+                    }
+                };
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (text) {
+                    summarizerTextP.innerHTML = text.replace(/\n/g, '<br>');
+                } else {
+                    summarizerTextP.innerHTML = 'Sorry, an error occurred. Please try again.';
+                }
+            } catch (error) {
+                console.error('Error summarizing project:', error);
+                summarizerTextP.innerHTML = 'Sorry, an error occurred. Please try again.';
+            } finally {
+                summarizeButton.textContent = 'Summarize Project';
+                summarizeButton.disabled = false;
+                summarizerResponseDiv.classList.remove('hidden');
+            }
+        });
+        
+        // Gemini API integration for Text-to-Speech
+        const ttsButton = document.getElementById('tts-button');
+        const aboutText = document.getElementById('about-text').innerText;
+        const audio = new Audio();
+
+        ttsButton.addEventListener('click', async () => {
+            ttsButton.disabled = true;
+            const originalText = ttsButton.innerHTML;
+            ttsButton.innerHTML = 'Generating Audio...';
+
+            try {
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+
+                const payload = {
+                    contents: [{
+                        parts: [{ text: aboutText }]
+                    }],
+                    generationConfig: {
+                        responseModalities: ["AUDIO"],
+                        speechConfig: {
+                            voiceConfig: {
+                                prebuiltVoiceConfig: { voiceName: "Kore" }
+                            }
+                        }
+                    }
+                };
+                
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const result = await response.json();
+                const part = result?.candidates?.[0]?.content?.parts?.[0];
+                const audioData = part?.inlineData?.data;
+                const mimeType = part?.inlineData?.mimeType;
+
+                if (audioData && mimeType && mimeType.startsWith("audio/")) {
+                    const sampleRateMatch = mimeType.match(/rate=(\d+)/);
+                    const sampleRate = sampleRateMatch ? parseInt(sampleRateMatch[1], 10) : 16000;
+                    const pcmData = Uint8Array.from(atob(audioData), c => c.charCodeAt(0));
+                    const pcm16 = new Int16Array(pcmData.buffer);
+                    const wavBlob = pcmToWav(pcm16, sampleRate);
+                    audio.src = URL.createObjectURL(wavBlob);
+                    audio.play();
+                } else {
+                    console.error('Invalid audio data received.');
+                }
+            } catch (error) {
+                console.error('Error generating TTS audio:', error);
+            } finally {
+                ttsButton.innerHTML = originalText;
+                ttsButton.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
