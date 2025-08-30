@@ -122,7 +122,7 @@
             <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
                 <!-- Profile photo -->
                 <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden border-4 border-gray-700 shadow-xl transform transition-all duration-500 hover:scale-105">
-                    <img src="https://media.licdn.com/dms/image/D5603AQG0n433hKk6qQ/profile-displayphoto-shrink_800_800/0/1690024472304?e=2147483647&v=beta&t=xV1h8_xT4cO5bQ8g-0aX-2yO1n6wYdM6H-9N5tK5d8A" alt="Rishav Raj's professional headshot" class="w-full h-full object-cover">
+                    <img src="https://storage.googleapis.com/generative-ai-production-media/gemini-pro/img_n784q2n784q2n784.png" alt="Rishav Raj's professional headshot" class="w-full h-full object-cover">
                 </div>
                 <div class="text-left max-w-xl">
                     <h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight animate-fade-in-up">
@@ -575,7 +575,7 @@
         const aboutText = document.getElementById('about-text').innerText;
         const name = "Rishav Raj";
         const title = "Data Scientist and Business Analyst";
-        const fullAboutText = `Hello, I'm ${name}, a ${title}. ${aboutText}`;
+        const fullAboutText = `I am a Data Scientist with a passion for leveraging data science techniques to solve complex business challenges. With expertise in data science, AI, and advanced analytics, I bridge business strategy with technology to deliver impactful solutions. I am skilled in Python, SQL, and data visualization tools like Power BI, transforming raw data into actionable insights that drive business growth. What drives me is curiosity—constantly asking 'what's next' and pushing boundaries through continuous learning, unlearning, and relearning. I aim to bring clarity, innovation, and forward-thinking solutions to every problem I tackle. At my core, I'm someone who values research-driven insights and innovation, and believes in building solutions that are not just smart, but also scalable and impactful.`;
         const audio = new Audio();
 
         ttsButton.addEventListener('click', async () => {
@@ -670,7 +670,6 @@
                 
                 const payload = {
                     contents: [{
-                        role: "user",
                         parts: [{ text: userQuery }]
                     }],
                     systemInstruction: {
