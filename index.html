@@ -32,6 +32,49 @@
         .pill {
             @apply inline-block bg-gray-700 text-gray-200 text-xs font-semibold px-3 py-1 rounded-full;
         }
+        .chat-container {
+            height: 400px;
+            overflow-y: auto;
+            border-radius: 12px;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background-color: #1f2937;
+        }
+        .chat-message {
+            max-width: 80%;
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .chat-message.user {
+            background-color: #3b82f6;
+            color: white;
+            align-self: flex-end;
+        }
+        .chat-message.ai {
+            background-color: #4b5563;
+            color: #e5e7eb;
+            align-self: flex-start;
+        }
+        .gradient-divider {
+            height: 2px;
+            background-image: linear-gradient(to right, #6EE7B7, #3B82F6, transparent);
+            width: 75%;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            border-radius: 9999px;
+            opacity: 0.5;
+        }
+        @keyframes fadeInMoveUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInMoveUp 1s ease-out forwards;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-300">
@@ -47,6 +90,7 @@
                     <a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-300">Projects</a>
                     <a href="#skills" class="text-gray-300 hover:text-white transition-colors duration-300">Skills</a>
                     <a href="#ai-lab" class="text-gray-300 hover:text-white transition-colors duration-300">AI Lab</a>
+                    <a href="#chat" class="text-gray-300 hover:text-white transition-colors duration-300">Chat</a>
                     <a href="#education" class="text-gray-300 hover:text-white transition-colors duration-300">Education</a>
                     <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a>
                 </div>
@@ -64,6 +108,7 @@
                 <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">Projects</a>
                 <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">Skills</a>
                 <a href="#ai-lab" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">AI Lab</a>
+                <a href="#chat" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">Chat</a>
                 <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">Education</a>
                 <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 transition-colors duration-300">Contact</a>
             </div>
@@ -75,28 +120,32 @@
         <!-- About Me Section -->
         <section id="about" class="section text-center">
             <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
+                <!-- Profile photo -->
                 <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden border-4 border-gray-700 shadow-xl transform transition-all duration-500 hover:scale-105">
-                    <!-- Placeholder image for a professional headshot -->
-                    <img src="https://placehold.co/256x256/1f2937/d1d5db?text=Rishav+Raj" alt="Rishav Raj's professional headshot" class="w-full h-full object-cover">
+                    <img src="https://media.licdn.com/dms/image/D5603AQG0n433hKk6qQ/profile-displayphoto-shrink_800_800/0/1690024472304?e=2147483647&v=beta&t=xV1h8_xT4cO5bQ8g-0aX-2yO1n6wYdM6H-9N5tK5d8A" alt="Rishav Raj's professional headshot" class="w-full h-full object-cover">
                 </div>
                 <div class="text-left max-w-xl">
-                    <h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
+                    <h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight animate-fade-in-up">
                         Rishav Raj
                     </h1>
-                    <p class="mt-2 text-xl sm:text-2xl font-semibold text-gray-400">
+                    <p class="mt-2 text-xl sm:text-2xl font-semibold text-gray-400 animate-fade-in-up" style="animation-delay: 0.2s;">
                         Data Scientist & Business Analyst
                     </p>
-                    <p id="about-text" class="mt-4 text-gray-400 leading-relaxed">
+                    <p id="about-text" class="mt-4 text-gray-400 leading-relaxed animate-fade-in-up" style="animation-delay: 0.4s;">
                         I'm a Data Scientist with a passion for leveraging data science techniques to solve complex business challenges. With expertise in data science, AI, and advanced analytics, I bridge business strategy with technology to deliver impactful solutions. I am skilled in Python, SQL, and data visualization tools like Power BI, transforming raw data into actionable insights that drive business growth.
                     </p>
                     <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-4">
-                        <button id="tts-button" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition-all duration-300 hover:bg-blue-500 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        <button id="tts-button" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition-all duration-300 hover:bg-blue-500 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 animate-fade-in-up" style="animation-delay: 0.6s;">
                             Listen to My Summary ✨
                         </button>
                     </div>
                 </div>
             </div>
         </section>
+
+        <div class="flex justify-center">
+            <div class="gradient-divider"></div>
+        </div>
 
         <!-- Work Experience Section -->
         <section id="experience" class="section">
@@ -131,6 +180,10 @@
                 </div>
             </div>
         </section>
+
+        <div class="flex justify-center">
+            <div class="gradient-divider"></div>
+        </div>
 
         <!-- Projects & Achievements Section -->
         <section id="projects" class="section">
@@ -175,6 +228,10 @@
             </div>
         </section>
         
+        <div class="flex justify-center">
+            <div class="gradient-divider"></div>
+        </div>
+        
         <!-- Project Summarizer Section -->
         <section id="summarizer" class="section">
             <h2 class="text-4xl font-bold text-center text-white mb-12">Project Summarizer ✨</h2>
@@ -193,6 +250,10 @@
                 </div>
             </div>
         </section>
+        
+        <div class="flex justify-center">
+            <div class="gradient-divider"></div>
+        </div>
 
         <!-- Skills Section -->
         <section id="skills" class="section">
@@ -247,6 +308,10 @@
             </div>
         </section>
 
+        <div class="flex justify-center">
+            <div class="gradient-divider"></div>
+        </div>
+
         <!-- Data Science AI Lab -->
         <section id="ai-lab" class="section">
             <h2 class="text-4xl font-bold text-center text-white mb-12">Data Science ✨ AI Lab</h2>
@@ -265,6 +330,32 @@
                 </div>
             </div>
         </section>
+        
+        <div class="flex justify-center">
+            <div class="gradient-divider"></div>
+        </div>
+
+        <!-- Data Analysis Chat Section -->
+        <section id="chat" class="section">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">Data Analysis ✨ Chat</h2>
+            <div class="card max-w-3xl mx-auto">
+                <div id="chat-container" class="chat-container mb-4">
+                    <div class="chat-message ai">
+                        <p>Hello! I'm a Data Analysis bot. I've been trained on Rishav Raj's professional experience and projects. How can I help you?</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <input type="text" id="chat-input" placeholder="Ask about Rishav Raj's projects, skills, or experience..." class="flex-1 p-3 rounded-xl bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button id="chat-send-button" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition-all duration-300 hover:bg-blue-500">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div class="flex justify-center">
+            <div class="gradient-divider"></div>
+        </div>
 
         <!-- Education Section -->
         <section id="education" class="section">
@@ -286,6 +377,10 @@
                 </div>
             </div>
         </section>
+
+        <div class="flex justify-center">
+            <div class="gradient-divider"></div>
+        </div>
 
         <!-- Contact Section -->
         <section id="contact" class="section text-center">
@@ -470,7 +565,7 @@
                 summarizerTextP.innerHTML = 'Sorry, an error occurred. Please try again.';
             } finally {
                 summarizeButton.textContent = 'Summarize Project';
-                summarizeButton.disabled = false;
+                summarizerButton.disabled = false;
                 summarizerResponseDiv.classList.remove('hidden');
             }
         });
@@ -478,6 +573,9 @@
         // Gemini API integration for Text-to-Speech
         const ttsButton = document.getElementById('tts-button');
         const aboutText = document.getElementById('about-text').innerText;
+        const name = "Rishav Raj";
+        const title = "Data Scientist and Business Analyst";
+        const fullAboutText = `Hello, I'm ${name}, a ${title}. ${aboutText}`;
         const audio = new Audio();
 
         ttsButton.addEventListener('click', async () => {
@@ -491,7 +589,7 @@
 
                 const payload = {
                     contents: [{
-                        parts: [{ text: aboutText }]
+                        parts: [{ text: fullAboutText }]
                     }],
                     generationConfig: {
                         responseModalities: ["AUDIO"],
@@ -530,6 +628,94 @@
             } finally {
                 ttsButton.innerHTML = originalText;
                 ttsButton.disabled = false;
+            }
+        });
+        
+        // Data Analysis Chatbot
+        const chatInput = document.getElementById('chat-input');
+        const chatSendButton = document.getElementById('chat-send-button');
+        const chatContainer = document.getElementById('chat-container');
+
+        const chatHistory = [{
+            role: "model",
+            parts: [{
+                text: "Hello! I'm a Data Analysis bot. I've been trained on Rishav Raj's professional experience and projects. How can I help you?"
+            }]
+        }];
+
+        async function sendMessage() {
+            const userMessage = chatInput.value.trim();
+            if (userMessage === "") return;
+
+            // Add user message to chat history
+            chatHistory.push({
+                role: "user",
+                parts: [{
+                    text: userMessage
+                }]
+            });
+            renderMessage(userMessage, 'user');
+            chatInput.value = "";
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            chatSendButton.disabled = true;
+            chatSendButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i>`;
+
+            const systemPrompt = "You are a professional Data Analysis chatbot. Your purpose is to answer questions about Rishav Raj's professional background and skills based on the context provided. The context includes his work experience at TCS and Udaan, his key projects (Automated Invoicing Dashboard, Financial Forecasting Model, Inventory Optimization), and his skills (Python, SQL, Power BI, etc.). Answer questions professionally and concisely, pulling information from the provided context. If a user asks a question that cannot be answered from the provided context, politely state that the information is not available in Rishav's public portfolio.";
+            const userQuery = `Using the following context, answer the user's question. If the information is not available, state that politely. Context: Rishav Raj is a Data Scientist. At TCS (March 2024-Present), he led development of documentation (reducing errors by 25%), conducted ad-hoc analysis, partnered with cross-functional teams, and implemented data quality improvements. At Udaan (Sep 2019-Feb 2024), he enhanced budgeting accuracy by 95%, launched a VMS (99% efficiency), automated GST reporting (95% reduction in outstanding dues), and executed invoice reconciliation (90% reduction in unexpected invoicing). His key projects include an Automated Invoicing Dashboard (increased efficiency by 99%), a Financial Forecasting Model (95% budgeting accuracy), and Inventory Optimization (33% lead time reduction, 47% cost reduction). His technical skills are Python, SQL, Power BI, Matplotlib, Seaborn, Scikit-learn, Numpy, Pandas, Jupyter Notebook, Git, Excel, and Google Analytics. The user's question is: '${userMessage}'.`;
+
+            try {
+                const apiKey = "AIzaSyBJ3uG2dKN7Tyd3nRar-8-kBXG7chW9X_M";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                
+                const payload = {
+                    contents: [{
+                        role: "user",
+                        parts: [{ text: userQuery }]
+                    }],
+                    systemInstruction: {
+                        parts: [{ text: systemPrompt }]
+                    }
+                };
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                const aiResponse = result?.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I am unable to answer that question based on the provided information.";
+
+                // Add AI response to chat history
+                chatHistory.push({
+                    role: "model",
+                    parts: [{
+                        text: aiResponse
+                    }]
+                });
+                renderMessage(aiResponse, 'ai');
+            } catch (error) {
+                console.error("Error during chat:", error);
+                renderMessage("Sorry, I'm having trouble connecting right now. Please try again later.", 'ai');
+            } finally {
+                chatSendButton.disabled = false;
+                chatSendButton.innerHTML = `<i class="fas fa-paper-plane"></i>`;
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+        }
+
+        function renderMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('chat-message', sender);
+            messageDiv.innerHTML = `<p>${text}</p>`;
+            chatContainer.appendChild(messageDiv);
+        }
+
+        chatSendButton.addEventListener('click', sendMessage);
+
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
             }
         });
     </script>
